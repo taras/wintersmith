@@ -12,7 +12,7 @@ usage = """
 
     #{ 'build'.bold } [options] - build a site
     #{ 'preview'.bold } [options] - run local webserver
-    #{ 'new'.bold } <location> - create a new site
+    #{ 'create'.bold } <location> - create a new site
     #{ 'plugin'.bold } - manage plugins
 
     also see [command] --help

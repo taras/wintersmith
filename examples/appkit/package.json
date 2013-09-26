@@ -42,7 +42,6 @@
     "grunt-concat-sourcemap": "~0.3.0",
     "grunt-dom-munger": "~2.0.1",
     "wintersmith": "~2.0.7",
-    "wintersmith-handlebars": "~0.0.3",
     "grunt-wintersmith": "~0.0.2",
     "underscore": "~1.5.2"      
   },

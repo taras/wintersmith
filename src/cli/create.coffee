@@ -21,7 +21,7 @@ loadTemplates path.join getStorageDir(), 'templates/'
 
 usage = """
 
-  usage: embersmith new [options] <path>
+  usage: embersmith create [options] <path>
 
   creates a skeleton site in <path>
 

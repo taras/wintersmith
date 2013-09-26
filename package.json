@@ -45,7 +45,8 @@
     "npm": "1.2.x"
   },
   "devDependencies": {
-    "shelljs": "0.1.x"
+    "shelljs": "0.1.x",
+    "handlebars": "~1.0.12"
   },
   "engine": {
     "node": ">=0.6"

@@ -97,21 +97,8 @@ module.exports = (env, callback) ->
         callback null, markdown
     , callback
 
-  class JsonPage extends MarkdownPage
-    ### Plugin that allows pages to be created with just metadata form a JSON file ###
-
-  JsonPage.fromFile = (filepath, callback) ->
-    async.waterfall [
-      async.apply env.utils.readJSON, filepath.full
-      (metadata, callback) =>
-        markdown = metadata.content or ''
-        page = new this filepath, metadata, markdown
-        callback null, page
-    ], callback
-
   # register the plugins
   env.registerContentPlugin 'pages', '**/*.*(markdown|mkd|md)', MarkdownPage
-  env.registerContentPlugin 'pages', '**/*.json', JsonPage
 
   # done!
   callback()
