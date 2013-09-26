@@ -269,6 +269,7 @@ class Environment extends EventEmitter
     @mode = 'preview'
     # set url to dev url in preview mode
     if @locals.dev? then @locals.url = @locals.dev
+    server = require './server'
     server.run this, callback
 
   build: (outputDir, callback) ->
