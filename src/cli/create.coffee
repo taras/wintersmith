@@ -44,7 +44,7 @@ options =
     alias: 'f'
   template:
     alias: 'T'
-    default: 'appkit'
+    default: 'starter'
 
 createSite = (argv) ->
   ### copy example directory to *location* ###
