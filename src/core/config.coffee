@@ -30,7 +30,7 @@ class Config
     baseUrl: '/'
     # preview server settings
     hostname: null # INADDR_ANY
-    port: 8080
+    port: 8000
     # options prefixed with _ are undocumented and should generally not be modified
     _fileLimit: 40 # max files to keep open at once
 

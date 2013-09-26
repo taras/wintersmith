@@ -6,8 +6,5 @@
     "description": "",
     "keywords": ""
   },
-  "output": "./tmp/public",
-  "plugins": [
-    "./plugins/env-patch"
-  ]
+  "output": "./tmp/public"
 }

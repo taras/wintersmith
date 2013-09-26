@@ -267,7 +267,8 @@ class Environment extends EventEmitter
     ### Start the preview server. Calls *callback* when server is up and
         running or if an error occurs. ###
     @mode = 'preview'
-    server = require './server'
+    # set url to dev url in preview mode
+    if @locals.dev? then @locals.url = @locals.dev
     server.run this, callback
 
   build: (outputDir, callback) ->
