@@ -35,7 +35,7 @@ usage = """
   example:
 
     create a new site in your home directory
-    $ embersmith new ~/ember-app
+    $ embersmith create ~/ember-app
 
 """
 
@@ -44,7 +44,7 @@ options =
     alias: 'f'
   template:
     alias: 'T'
-    default: 'starter'
+    default: 'starterkit'
 
 createSite = (argv) ->
   ### copy example directory to *location* ###
