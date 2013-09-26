@@ -15,7 +15,7 @@ listFile = path.join cacheDir, 'plugins.json'
 
 usage = """
 
-  usage: wintersmith plugin [options] <command>
+  usage: embersmith plugin [options] <command>
 
   commands:
 
@@ -55,7 +55,7 @@ clip = (string, maxlen) ->
   return string[0...maxlen-2].trim() + ".."
 
 isPlugin = (module) ->
-  'wintersmith-plugin' in module.keywords
+  'embersmith-plugin' in module.keywords
 
 ensureCacheDir = (callback) ->
   mkdirp cacheDir, (error) -> callback error
@@ -63,7 +63,7 @@ ensureCacheDir = (callback) ->
 fetchListing = (callback) ->
   async.waterfall [
     (callback) -> npm.load {logstream: new NpmAdapter(logger)}, callback
-    (_, callback) -> npm.commands.search 'wintersmith', true, 60, callback
+    (_, callback) -> npm.commands.search 'embersmith', true, 60, callback
     (result, callback) ->
       plugins = (value for key, value of result).filter(isPlugin)
       updated = Date.now()
@@ -135,7 +135,7 @@ waterfall = (flow, callback) ->
   async.waterfall resolved, callback
 
 normalizePluginName = (name) ->
-  name.replace /^wintersmith\-/, ''
+  name.replace /^embersmith\-/, ''
 
 main = (argv) ->
   action = argv._[1]

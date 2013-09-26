@@ -21,7 +21,7 @@ loadTemplates path.join getStorageDir(), 'templates/'
 
 usage = """
 
-  usage: wintersmith new [options] <path>
+  usage: embersmith new [options] <path>
 
   creates a skeleton site in <path>
 
@@ -35,7 +35,7 @@ usage = """
   example:
 
     create a new site in your home directory
-    $ wintersmith new ~/my-blog
+    $ embersmith new ~/my-blog
 
 """
 
@@ -61,7 +61,7 @@ createSite = (argv) ->
   from = templates[argv.template]
   to = path.resolve location
 
-  logger.info "initializing new wintersmith site in #{ to } using template #{ argv.template }"
+  logger.info "initializing new embersmith site in #{ to } using template #{ argv.template }"
 
   validateDestination = (callback) ->
     logger.verbose "checking validity of #{ to }"

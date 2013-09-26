@@ -39,7 +39,7 @@ exports.commonUsage = [
 ].join '\n'
 
 exports.loadEnv = (argv, callback) ->
-  ### creates a new wintersmith environment
+  ### creates a new embersmith environment
       options are resolved with the hierarchy: argv > configfile > defaults ###
 
   workDir = path.resolve (argv.chdir or process.cwd())
@@ -135,10 +135,10 @@ exports.NpmAdapter = class NpmAdapter extends stream.Writable
         @logger.verbose "npm: #{ line }"
 
 exports.getStorageDir = ->
-  ### Return users wintersmith directory, used for cache and user templates. ###
-  return process.env.WINTERSMITH_PATH if process.env.WINTERSMITH_PATH?
+  ### Return users embersmith directory, used for cache and user templates. ###
+  return process.env.EMBERSMITH_PATH if process.env.EMBERSMITH_PATH?
   home = process.env.HOME or process.env.USERPROFILE
-  dir = 'wintersmith'
+  dir = 'embersmith'
   if process.platform isnt 'win32'
     dir = '.' + dir
   return path.resolve(home, dir)

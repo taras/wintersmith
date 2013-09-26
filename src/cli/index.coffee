@@ -6,7 +6,7 @@ path = require 'path'
 
 usage = """
 
-  usage: wintersmith [options] [command]
+  usage: embersmith [options] [command]
 
   commands:
 

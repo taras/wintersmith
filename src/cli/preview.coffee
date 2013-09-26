@@ -9,7 +9,7 @@ util = require 'util'
 
 usage = """
 
-  usage: wintersmith preview [options]
+  usage: embersmith preview [options]
 
   options:
 
@@ -22,7 +22,7 @@ usage = """
   examples:
 
     preview using a config file (assuming config.json is found in working directory):
-    $ wintersmith preview
+    $ embersmith preview
 
 """
 

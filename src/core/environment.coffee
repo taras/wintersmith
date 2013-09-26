@@ -17,7 +17,7 @@ utils = require './utils'
 {readJSON, readJSONSync} = utils
 
 class Environment extends EventEmitter
-  ### The Wintersmith environment. ###
+  ### The Embersmith environment. ###
 
   utils: utils
   ContentTree: ContentTree

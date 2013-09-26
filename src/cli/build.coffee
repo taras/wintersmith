@@ -10,7 +10,7 @@ rimraf = require 'rimraf'
 
 usage = """
 
-  usage: wintersmith build [options]
+  usage: embersmith build [options]
 
   options:
 
@@ -23,13 +23,13 @@ usage = """
   examples:
 
     build using a config file (assuming config.json is found in working directory):
-    $ wintersmith build
+    $ embersmith build
 
     build using command line options:
-    $ wintersmith build -o /var/www/public/ -T extra_data.json -C ~/my-blog
+    $ embersmith build -o /var/www/public/ -T extra_data.json -C ~/my-blog
 
     or using both (command-line options will override config options):
-    $ wintersmith build --config another_config.json --clean
+    $ embersmith build --config another_config.json --clean
 
 """
 

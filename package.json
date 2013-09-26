@@ -1,8 +1,8 @@
 {
-  "name": "wintersmith",
-  "version": "2.0.6-pre",
-  "author": "Johan Nordberg <its@johan-nordberg.com>",
-  "description": "A flexible static site generator.",
+  "name": "embersmith",
+  "version": "0.5",
+  "author": "Taras Mankovski <tarasm@gmail.com>",
+  "description": "Static generator for Ember.js community.",
   "license": "MIT",
   "main": "./lib/",
   "keywords": [
@@ -12,7 +12,7 @@
     "jade"
   ],
   "bin": {
-    "wintersmith": "./bin/wintersmith"
+    "embersmith": "./bin/embersmith"
   },
   "scripts": {
     "prepublish": "node ./bin/dev/compile_coffee"
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jnordberg/wintersmith.git"
+    "url": "https://github.com/taras/embersmith.git"
   },
   "dependencies": {
     "marked": "0.2.x",
