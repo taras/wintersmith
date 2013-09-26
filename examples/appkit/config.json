@@ -1,0 +1,14 @@
+{
+  "locals": {
+    "name": "Ember App with Wintersmith",
+    "url": "http://awesomeapp.com/",
+    "dev": "http://localhost:8000",
+    "description": "",
+    "keywords": ""
+  },
+  "output": "./tmp/public",
+  "plugins": [
+    "wintersmith-handlebars",
+    "./plugins/env-patch"
+  ]
+}
