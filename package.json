@@ -1,8 +1,8 @@
 {
   "name": "embersmith",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Taras Mankovski <tarasm@gmail.com>",
-  "description": "Static generator for Ember.js community.",
+  "description": "Static generator for Ember.js projects.",
   "license": "MIT",
   "main": "./lib/",
   "keywords": [
