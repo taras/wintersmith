@@ -1,0 +1,12 @@
+{
+  "name": "embersmith-docs",
+  "version": "0.5.2",
+  "private": true,
+  "author": "Taras Mankovski",
+  "license": "MIT",
+  "devDependencies": {
+    "embersmith": "~0.5.2"      
+  },
+  "dependencies": {
+  }
+}

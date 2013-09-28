@@ -1,0 +1,9 @@
+{
+  "locals": {
+    "name": "Embersmith Documentation",
+    "url": "http://taras.github.io/embersmith",
+    "dev": "http://localhost:8000",
+    "description": "",
+    "keywords": ""
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Embersmith Docs",
+  "version": "0.5.2",
+  "homepage": "https://github.com/taras/embersmith",
+  "authors": [
+    "Taras Mankovski <tarasm@gmail.com>"
+  ],
+  "description": "Documentation for Embersmith static generator for Ember.js projects",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.0"
+  }
+}
