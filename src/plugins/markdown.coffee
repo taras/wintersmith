@@ -48,6 +48,20 @@ module.exports = (env, callback) ->
       options = env.config.markdown or {}
       return parseMarkdownSync @markdown, @getLocation(base), options
 
+    @property 'markdown': -> @markdown
+
+  MarkdownPage.serialize = ->
+    obj =
+      title: @title
+      description: @description
+      intro: @intro
+      url: @getLocation()
+      markdown: @markdown
+      html: @html
+      date: @date
+      rfc822date: @rfc822date
+      hasMore: @hasMore
+
   MarkdownPage.fromFile = (filepath, callback) ->
     async.waterfall [
       (callback) ->

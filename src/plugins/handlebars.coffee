@@ -14,7 +14,13 @@ module.exports = (env, callback) ->
 
     render: (locals, callback) ->
       try
-        rendered = @tpl locals
+        # This might be a bad idea, time will tell.
+        # I'm extracting values from the page and using it as basic context
+        # into the page, I'm inserting the other properties
+        ctx = locals.page.serialize()
+        ctx['contents'] = locals.contents
+        ctx['locals'] = locals.env.locals
+        rendered = @tpl ctx
         callback null, new Buffer rendered
       catch error
         callback error

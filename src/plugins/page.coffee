@@ -67,10 +67,14 @@ module.exports = (env, callback) ->
 
     ### Template property used by the 'template' view ###
     @property 'template', ->
+      # TODO: make this auto add .hbs extension
       @metadata.template or env.config.defaultTemplate or 'none'
 
     @property 'title', ->
       @metadata.title or 'Untitled'
+
+    @property 'description', ->
+      @metadata.description or ''
 
     @property 'date', ->
       new Date(@metadata.date or 0)
@@ -83,6 +87,17 @@ module.exports = (env, callback) ->
       @_intro ?= @getIntro()
       @_hasMore ?= (@_html.length > @_intro.length)
       return @_hasMore
+
+  Page.serialize = ->
+    obj =
+      title: @title
+      description: @description
+      intro: @intro
+      url: @url
+      html: @html
+      date: @date
+      rfc822date: @rfc822date
+      hasMore: @hasMore
 
   # add the page plugin to the env since other plugins might want to subclass it
   # and we are not registering it as a plugin itself

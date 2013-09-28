@@ -64,12 +64,21 @@ class ContentPlugin
     ### Return plugin information. Also displayed in the content tree printout. ###
     return "url: #{ @url }"
 
+  serialize: ->
+    ### Return just values returned by serializer for this page type ###
+    @constructor.serialize.call this
+    
+
 ContentPlugin.fromFile = (filepath, callback) ->
   ### Calls *callback* with an instance of class. Where *filepath* is an object containing
       both the absolute and realative paths for the file. e.g.
       {full: "/home/foo/mysite/contents/somedir/somefile.ext",
        relative: "somedir/somefile.ext"} ###
   throw new Error 'Not implemented.'
+
+ContentPlugin.serialize = ->
+  ### Return a object populated with values from the given object###
+  throw new Error 'Not implemented'
 
 class StaticFile extends ContentPlugin
   ### Static file handler, simply serves content as-is. Last in chain. ###

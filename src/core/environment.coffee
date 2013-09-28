@@ -287,17 +287,6 @@ class Environment extends EventEmitter
         render this, outputDir, contents, templates, locals, callback
     ], callback
 
-  getGraph: (callback) ->
-    ### Build a dependency graph ###
-    {buildGraph} = require './graph'
-    async.waterfall [
-      (callback) =>
-        @load callback
-      (result, callback) =>
-        {contents, templates, locals} = result
-        buildGraph this, contents, templates, locals, callback
-    ], callback
-
 Environment.create = (config, workDir, log=logger) ->
   ### Set up a new environment using the default logger, *config* can be
       either a config object, a Config instance or a path to a config file. ###
@@ -313,7 +302,7 @@ Environment.create = (config, workDir, log=logger) ->
 
   return new Environment config, workDir, log
 
-Environment.defaultPlugins = ['page', 'handlebars', 'markdown']
+Environment.defaultPlugins = ['page', 'handlebars', 'markdown', 'json']
 
 ### Exports ###
 
