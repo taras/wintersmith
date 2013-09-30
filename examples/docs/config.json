@@ -5,5 +5,6 @@
     "dev": "http://localhost:8000",
     "description": "",
     "keywords": ""
-  }
+  },
+  "ignore": []
 }

@@ -68,7 +68,6 @@ class ContentPlugin
     ### Return just values returned by serializer for this page type ###
     @constructor.serialize.call this
     
-
 ContentPlugin.fromFile = (filepath, callback) ->
   ### Calls *callback* with an instance of class. Where *filepath* is an object containing
       both the absolute and realative paths for the file. e.g.
@@ -104,6 +103,10 @@ StaticFile.fromFile = (filepath, callback) ->
   # normally you would want to read the file here, the static plugin however
   # just pipes it to the file/http response
   callback null, new StaticFile(filepath)
+
+StaticFile.serialize = ->
+  ### Return a object populated with values from the given object###
+  throw null
 
 loadContent = (env, filepath, callback) ->
   ### Helper that loads content plugin found in *filepath*. ###

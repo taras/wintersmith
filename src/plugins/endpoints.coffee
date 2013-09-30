@@ -11,7 +11,7 @@ module.exports = (env, callback) ->
 
   jsonView = (env, locals, contents, templates, callback) ->
     # serialize all of the objects
-    content = ( obj.serialize() for obj in @content )
+    content = ( obj.serialize() for obj in @content when obj instanceof env.plugins.MarkdownPage )
     callback null, new Buffer JSON.stringify(content)
 
   env.registerView 'json', jsonView
@@ -22,7 +22,13 @@ module.exports = (env, callback) ->
 
     rv = {endpoints:{}}
     getEndpoints(contents).map (page) -> 
-      content = ( item for filename, item of page.parent when item != page )
+      content = []
+      for filename, item of page.parent
+        if item != page
+          if item instanceof env.ContentTree
+            content.push item["index.md"]
+          else
+            content.push item
       relative = page.filepath.relative.replace(/\/index.md/, '') + '.json'
       filepath = {
         relative: relative,
