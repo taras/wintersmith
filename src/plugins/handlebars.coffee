@@ -1,6 +1,7 @@
 handlebars = require 'handlebars'
 path = require 'path'
 fs = require 'fs'
+require('coffee-script');
 
 module.exports = (env, callback) ->
 
@@ -74,6 +75,6 @@ module.exports = (env, callback) ->
   # Registering the plugins
   env.registerTemplatePlugin '**/*.*(hbs)', HandlebarsTemplate
   env.registerTemplatePlugin "**/#{options.partialDir}/*.*(hbs)", HandlebarsPartial
-  env.registerTemplatePlugin "**/#{options.helperDir}/*.*(js)", HandlebarsHelper
+  env.registerTemplatePlugin "**/#{options.helperDir}/*.*(js|coffee)", HandlebarsHelper
   # return callback
   callback()
