@@ -2,3 +2,11 @@ article, section {
   max-width: 1280px;
   margin: 0 auto;
 }
+
+.navbar-nav li iframe {
+  margin-top: 10px;
+}
+
+.navbar-nav li.twitter {
+  margin-right: 10px;
+}

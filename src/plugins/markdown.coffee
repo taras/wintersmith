@@ -61,7 +61,7 @@ module.exports = (env, callback) ->
         hasMore: @hasMore
       # merge metadata into values of the page
       for key, value of @metadata
-        page[key] = value
+        if not page[key]? then page[key] = value
       return page
 
   MarkdownPage.fromFile = (filepath, callback) ->

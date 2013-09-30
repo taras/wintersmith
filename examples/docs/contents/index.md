@@ -93,12 +93,20 @@ You can use ```{{some_property}}``` to get the value.
 
 ### Helpers
 
-Helpers are functions that you can execute in your templates. To register a helper, create a **.js** file in **/templates/helpers**. The name of the file will become the helper. 
+Helpers are functions that you can execute in your templates. To register a helper, create a **.js** file in **/templates/helpers**. The name of the file will become the helper. Your helpers can be in **JavaScript** or **CoffeeScript**
 
-**say-hello.js** with ↓ allows me to use ```{{say-hello 'Emberist'}}``` and it will output ```Hello Emerist```.
+Here is a **say-hello** helper in *JavaScript* and *CoffeeScript*.
+
 ```javascript
 module.exports = function( name ) {
   return "Hello " + name;
 }
 ```
 
+```coffeescript
+module.exports = (name) -> "Hello #{ name }"
+```
+
+ ```{{say-hello 'Emberist'}}``` will output "Hello Emberist"
+
+ 
