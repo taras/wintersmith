@@ -48,8 +48,6 @@ module.exports = (env, callback) ->
       options = env.config.markdown or {}
       return parseMarkdownSync @markdown, @getLocation(base), options
 
-    @property 'endpoint', -> @metadata.endpoint or false
-
     serialize: ->
       page =
         title: @title
