@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var spawn = require('safeps').spawn;
+
+// borrowed from docpad
+// Prefix our cli executable with the node debug and profile flags
+// and suffix cli with it's profile flag
+var command = [
+	'tracegl',
+	'-no:coffee-script',
+	__dirname+'/cli',
+].concat(process.argv.slice(2));
+
+// Output the command we'll be running
+console.log(command.join(' '));
+
+// And spawn our command and let us know if any errors occur
+spawn(command, {stdio:'inherit'}, function(err){
+	if (err)  console.log(err);
+});

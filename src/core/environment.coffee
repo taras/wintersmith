@@ -38,6 +38,7 @@ class Environment extends EventEmitter
     @views = {none: (args..., callback) -> callback()}
     @generators = []
     @plugins = {StaticFile}
+    @functions = {}
     @templatePlugins = []
     @contentPlugins = []
     @helpers = {}
@@ -302,7 +303,7 @@ Environment.create = (config, workDir, log=logger) ->
 
   return new Environment config, workDir, log
 
-Environment.defaultPlugins = ['page', 'handlebars', 'markdown', 'json']
+Environment.defaultPlugins = ['page', 'handlebars', 'markdown', 'endpoints']
 
 ### Exports ###
 

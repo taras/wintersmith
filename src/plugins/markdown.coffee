@@ -48,19 +48,23 @@ module.exports = (env, callback) ->
       options = env.config.markdown or {}
       return parseMarkdownSync @markdown, @getLocation(base), options
 
-    @property 'markdown': -> @markdown
+    @property 'endpoint', -> @metadata.endpoint or false
 
-  MarkdownPage.serialize = ->
-    obj =
-      title: @title
-      description: @description
-      intro: @intro
-      url: @getLocation()
-      markdown: @markdown
-      html: @html
-      date: @date
-      rfc822date: @rfc822date
-      hasMore: @hasMore
+    serialize: ->
+      page =
+        title: @title
+        description: @description
+        intro: @intro
+        url: env.locals.url + @url
+        markdown: @markdown
+        html: @html
+        date: @date
+        rfc822date: @rfc822date
+        hasMore: @hasMore
+      # merge metadata into values of the page
+      for key, value of @metadata
+        page[key] = value
+      return page
 
   MarkdownPage.fromFile = (filepath, callback) ->
     async.waterfall [

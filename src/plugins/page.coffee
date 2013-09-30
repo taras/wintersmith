@@ -88,16 +88,9 @@ module.exports = (env, callback) ->
       @_hasMore ?= (@_html.length > @_intro.length)
       return @_hasMore
 
-  Page.serialize = ->
-    obj =
-      title: @title
-      description: @description
-      intro: @intro
-      url: @url
-      html: @html
-      date: @date
-      rfc822date: @rfc822date
-      hasMore: @hasMore
+    serialize: -> 
+      ### return an instance of an Object with data for this page ###
+      throw new Error 'Not implemented.'
 
   # add the page plugin to the env since other plugins might want to subclass it
   # and we are not registering it as a plugin itself
