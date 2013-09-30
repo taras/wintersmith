@@ -102,5 +102,3 @@ module.exports = function( name ) {
 }
 ```
 
-
-

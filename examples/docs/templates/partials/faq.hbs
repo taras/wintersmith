@@ -1,0 +1,10 @@
+<h2>Frequently Asked Questions</h2>
+{{#with contents.[faq.md]}}
+  <div class="alert alert-info">{{{html}}}</div>
+  <dl>
+  {{#each metadata.[questions]}}
+    <dt>Q: {{@key}}</dt>
+    <dd>A: {{this}}</dd>
+  {{/each}}
+  </dl>
+{{/with}}
