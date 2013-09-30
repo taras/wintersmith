@@ -20,6 +20,7 @@ module.exports = (env, callback) ->
         ctx = locals.page.serialize()
         ctx['contents'] = locals.contents
         ctx['locals'] = locals.env.locals
+        ctx['env'] = env
         rendered = @tpl ctx
         callback null, new Buffer rendered
       catch error
