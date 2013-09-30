@@ -116,5 +116,7 @@ module.exports = (env, callback) ->
   # register the plugins
   env.registerContentPlugin 'pages', '**/*.*(markdown|mkd|md)', MarkdownPage
 
+  env.registerContentPlugin 'index', '**/index.*(markdown|mkd|md)', MarkdownPage
+
   # done!
   callback()
