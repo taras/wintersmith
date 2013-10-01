@@ -2,11 +2,15 @@
 <div class="container">
   <article class="row">
     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-      {{{html}}}
+      {{{toc-ize html}}}
       {{> faq}}
     </div>
     <aside class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-
+      <div class="list-group">
+      {{#toc html}}
+        <a href="{{url}}" class="list-group-item">{{title}}</a>
+      {{/toc}}
+      </div>
     </aside>
   </article>
 </div>

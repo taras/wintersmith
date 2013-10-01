@@ -8,7 +8,7 @@
     "embersmith": "~0.5.4"
   },
   "dependencies": {
-    "jquery": "~1.8.3",
-    "embersmith": "~0.5.4"
+    "embersmith": "~0.5.4",
+    "cheerio": "~0.12.2"
   }
 }
