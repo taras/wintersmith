@@ -2,7 +2,7 @@
   "name": "embersmith",
   "version": "0.5.5",
   "author": "Taras Mankovski <tarasm@gmail.com>",
-  "description": "Static generator for Ember.js projects.",
+  "description": "Static HTML and JSON generator for Ember.js projects.",
   "license": "MIT",
   "main": "./lib/",
   "keywords": [

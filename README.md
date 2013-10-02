@@ -1,12 +1,14 @@
 
 # Embersmith
 
-Embersmith is a static generator for [Ember.js](http://emberjs.com/) projects.
+**Embersmith** is a static HTML and JSON generator for [Ember.js](http://emberjs.com/) projects.
 
-## Getting Started
+## [Documentation](http://taras.github.io/embersmith)
 
-## About
+## Credit
 
-Embersmith is a fork of Wintersmith by [Johan Nordberg](http://johan-nordberg.com) using [CoffeeScript](http://coffeescript.org/) and licensed under the [MIT-license](http://en.wikipedia.org/wiki/MIT_License).
+Embersmith is a fork of Wintersmith by [Johan Nordberg](http://johan-nordberg.com) using [CoffeeScript](http://coffeescript.org/). 
 
-The name is a nod to [blacksmith](https://github.com/flatiron/blacksmith) which inspired this project.
+# License
+
+Licensed under the [MIT-license](http://en.wikipedia.org/wiki/MIT_License).
