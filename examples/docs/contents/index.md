@@ -11,7 +11,3 @@ template: jambotron.hbs
 * **Grunt** integration
 * Pretty URLs
 * Node.js
-
-<div class="next-step">
-  <a class="btn btn-lg btn-outline-inverse" href="/getting-started/">Let's get started!</a>
-</div>
