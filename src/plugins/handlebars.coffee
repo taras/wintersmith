@@ -19,6 +19,7 @@ module.exports = (env, callback) ->
         # I'm extracting values from the page and using it as basic context
         # into the page, I'm inserting the other properties
         ctx = locals.page.serialize()
+        ctx['that'] = locals.page
         ctx['contents'] = locals.contents
         ctx['locals'] = locals.env.locals
         ctx['env'] = env

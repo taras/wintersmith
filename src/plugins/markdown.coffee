@@ -64,6 +64,10 @@ module.exports = (env, callback) ->
         if not page[key]? then page[key] = value
       return page
 
+    parse_markdown: (markdown) ->
+      options = env.config.markdown or {}
+      return parseMarkdownSync markdown, @getLocation(env.config.baseUrl), options
+
   MarkdownPage.fromFile = (filepath, callback) ->
     async.waterfall [
       (callback) ->
@@ -117,6 +121,8 @@ module.exports = (env, callback) ->
   env.registerContentPlugin 'pages', '**/*.*(markdown|mkd|md)', MarkdownPage
 
   env.registerContentPlugin 'index', '**/index.*(markdown|mkd|md)', MarkdownPage
+
+  env.helpers.markdown = parseMarkdownSync
 
   # done!
   callback()
