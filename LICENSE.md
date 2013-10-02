@@ -1,5 +1,11 @@
 # The MIT License (MIT)
 
+## Embersmith
+
+Copyright (c) 2013 Taras Mankovski - http://twitter.com/tarasm
+
+## Wintersmith
+
 Copyright (c) 2012-2013 Johan Nordberg - http://johan-nordberg.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

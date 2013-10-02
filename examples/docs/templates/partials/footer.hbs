@@ -1,4 +1,27 @@
-    <script type="text/javascript" src="/assets/components/jquery/jquery.js"></script>
-    <script type="text/javascript" src="/assets/components/bootstrap/dist/js/bootstrap.js"></script>
+  <footer>
+    <hr>
+    <div class="links container">
+      <div class="iframes">
+        {{{twitter-share url=locals.url text="Embersmith - static HTML & JSON generator for Ember.JS projects"}}}
+        {{{github-watch 'small'}}}
+        {{{github-fork 'small'}}}
+      </div>
+      <div class="btn-group btn-group">        
+        {{#each locals.links}}
+          <a class="btn" href="{{this}}">{{@key}}</a>
+        {{/each}}
+      </div>
+
+      <div class="credits">
+        <p>Created by <a href="http://twitter.com/tarasm" target="_blank">@tarasm</a> from <a href="http://wintersmith.io">Wintersmith</a> source code by <a href="https://github.com/jnordberg">jnordberg</a><br>
+        Code licensed under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>, documentation under CC BY 3.0.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript" src="/assets/components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="/assets/components/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
