@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <title>Getting Started</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href='http://fonts.googleapis.com/css?family=Passion+One|Droid+Sans:400,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" type="text/css" href="/assets/components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/components/highlightjs/styles/tomorrow.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />    
+
+</head>
+<body class="">
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Embersmith</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/getting-started/">Getting Started</a></li>
+        <li class=""><a href="/writing/">Writing</a></li>
+        <li class=""><a href="/templating/">Templating</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/taras/embersherpa/issues">Issues</a></li>
+      </ul>      
+    </div><!-- /.navbar-collapse -->
+
+  </div>
+</nav>  
+<div class="container">
+  <article class="row">
+    <aside class="col-xs-12 col-sm-12 col-md-3 col-md-push-9 col-lg-3 col-lg-push-9">
+      <div class="list-group">
+      
+        <a href="#Overview" class="list-group-item">Overview</a>
+      
+
+        <a href="#Installation" class="list-group-item">Installation</a>
+      
+
+        <a href="#Project-Templates" class="list-group-item">Project Templates</a>
+      
+
+        <a href="#Create-a-new-project" class="list-group-item">Create a new project</a>
+      
+
+        <a href="#Add-to-an-existing-project" class="list-group-item">Add to an existing project</a>
+      
+
+        <a href="#Use-with-Grunt" class="list-group-item">Use with Grunt</a>
+      
+
+        <a href="#Commands" class="list-group-item">Commands</a>
+      
+      </div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">TLTR</h3>
+        </div>
+        <div class="panel-body">
+          <p><strong>Installation</strong>
+<code>npm install -g embersmith</code></p>
+<p><strong>Create Starter Kit Project</strong>
+<code>embersmith create dir_name</code></p>
+<p><strong>Create EAK Project</strong>
+<code>embersmith create -T appkit dir_name</code></p>
+<p><strong>Start Preview Server</strong>
+<code>embersmith preview</code></p>
+<p><strong>Build</strong>
+<code>embersmith build</code></p>
+<p><strong>With Grunt</strong> use <a href="https://npmjs.org/package/grunt-embersmith">grunt-embersmith</a> package</p>
+      
+        </div>
+      </div>
+      
+    </aside>  
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-pull-3 col-lg-9 col-lg-pull-3">
+      <div id="content">
+        <header>
+          <h1>Getting Started</h1>
+          <p>An overview of Embersmith, how to install it, project templates and commands.</p>
+          <hr>
+          </header>
+        <h2 id="Overview">Overview</h2>
+<p><strong>Embersmith</strong> is a Node.js application that takes <em>Markdown</em> files from your project&#39;s <strong>/contents</strong> directory and converts them to <em>HTML</em> &amp; <em>JSON</em> in <strong>/public</strong> directory.</p>
+<hr>
+<h2 id="Installation">Installation</h2>
+<p>If you don&#39;t already have Node.js installed, you can install it from <a href="http://nodejs.org/">Node.js website</a> or with a package manager ( like <a href="http://brew.sh/">Homebrew</a> on Mac OS X ).</p>
+<p>Run <code>npm install -g embersmith</code> to install <strong>Embersmith</strong>.</p>
+<hr>
+<h2 id="Project-Templates">Project Templates</h2>
+<p><strong>Embersmith</strong> comes with 3 project templates:</p>
+<ul>
+<li><a href="https://github.com/emberjs/starter-kit">Ember Starter Kit</a> for experiments and demos</li>
+<li><a href="https://github.com/stefanpenner/ember-app-kit">Ember App Kit</a> for ambitious applications</li>
+<li>Docs - this site</li>
+</ul>
+<hr>
+<h2 id="Create-a-new-project">Create a new project</h2>
+<p>You can create a project from command line with the <code>embersmith create dir_name</code>(subsitute dir_name for name of the directory) command. This command will assume that you want to create an <strong>Ember Starter Kit</strong> based project. </p>
+<p>To start an <strong>Ember App Kit</strong> based project, you have to tell the <em>create</em> command to use the <strong>appkit</strong> template. You can do this with <strong>-T appkit</strong> arguement. <code>embersmith create -T appkit dir_name</code></p>
+<hr>
+<h2 id="Add-to-an-existing-project">Add to an existing project</h2>
+<p>To add <strong>Embersmith</strong> to an existing project, </p>
+<pre><code class="lang-json">{
+  "<span class="attribute">locals</span>": <span class="value">{
+    "<span class="attribute">name</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">url</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">dev</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">description</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">keywords</span>": <span class="value"><span class="string">""</span>
+  }</span>
+}</span></code></pre>
+<ol>
+<li>create <strong>config.json</strong></li>
+<li>create <strong>contents</strong> &amp; <strong>templates</strong> directories in the root of your project</li>
+<li>create <strong>partials</strong> &amp; <strong>helpers</strong> directories in <strong>templates</strong> directory</li>
+<li>(Optional) <code>npm install embersmith --save-dev</code> add save as dev dependancy in your project&#39;s <strong>package.json</strong></li>
+</ol>
+<hr>
+<h2 id="Use-with-Grunt">Use with Grunt</h2>
+<p>For projects that use Grunt, you can use the <a href="https://npmjs.org/package/grunt-embersmith">grunt-embersmith</a> package to automate starting and stoping your server. Add it to your projects with <strong>npm install grunt-embersmith</strong>.</p>
+<hr>
+<h2 id="Commands">Commands</h2>
+<p>Once you created a project, you can run <strong>Embersmith</strong> commands inside of your project directory.</p>
+<ul>
+<li><code>embersmith preview</code> - starts preview server</li>
+<li><code>embersmith build</code> - generate all of the pages into the build directory</li>
+</ul>
+<div class="alert alert-warning">When using <strong>Embersmith</strong> with <em>Ember App Kit</em>, do not use the <code>embersmith</code> executable. It will give you very confusing results. Run <code>grunt server</code> and <strong>embersmith:build</strong> task instead.</div>
+
+      </div>
+    </div>
+  </article>
+</div>
+  <footer>
+    <hr>
+    <div class="links container">
+      <div class="iframes">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url='http://taras.github.io/embersmith' data-text='Embersmith - static HTML & JSON generator for Ember.JS projects' undefined>Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <iframe src="http://ghbtns.com/github-btn.html?user=taras&repo=embersmith&type=watch&count=true&size=small"
+allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=taras&repo=embersmith&type=fork&count=true&size=small"
+allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>
+      </div>
+      <div class="btn-group btn-group">        
+        
+          <a class="btn" href="https://github.com/taras/embersherpa">GitHub</a>
+        
+          <a class="btn" href="https://npmjs.org/package/embersmith">NPM</a>
+        
+      </div>
+
+      <div class="credits">
+        <p>Created by <a href="http://twitter.com/tarasm" target="_blank">@tarasm</a> from <a href="http://wintersmith.io">Wintersmith</a> source code by <a href="https://github.com/jnordberg">jnordberg</a><br>
+        Code licensed under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>, documentation under CC BY 3.0.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript" src="/assets/components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="/assets/components/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

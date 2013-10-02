@@ -1,0 +1,112 @@
+body {
+  background:url('images/shattered.png') repeat top left;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  body {
+    background:url('images/shattered_@2x.png') repeat top left;
+  }
+}
+
+.navbar-default .navbar-brand, h1, h2, h3, h4, h5, panel-title {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: bold;
+  color: #343434;
+}
+
+.jambotron {
+  font-size: 24px;
+  margin-bottom: 140px;
+}
+
+.jambotron h1 {
+  font-size: 84px;
+  margin-bottom: 0;
+  margin-top: 80px;
+  font-family: 'Passion One', cursive;
+  letter-spacing: 0.05em;
+}
+
+.jambotron h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #343434;
+}
+
+.jambotron .next-step {
+  margin-top: 40px;
+}
+
+article, section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#content {
+  background: white;
+  padding: 20px;
+  border: 1px solid #eee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#content header p {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 18px;
+}
+
+.navbar-nav li iframe {
+  margin-top: 10px;
+}
+
+.navbar-nav li.twitter {
+  margin-right: 10px;
+}
+
+/* code styling */
+pre code {
+  font-family: 'Droid Sans Mono', sans-serif;
+  background: none;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: #343434;
+}
+
+footer .links {
+  margin-top: 40px;
+}
+
+footer .credits {
+  margin-top: 20px;
+  color: #999999;
+}
+
+footer .credits a {
+  color: #999999;
+}
+
+footer div.iframes {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+aside .panel-body {
+  overflow-x: auto;
+}
+
+.btn-outline-inverse {
+  color: #343434;
+  background-color: white;
+  border-color: #eeeeee;  
+  font-weight: bold;
+}
+
+.btn-outline-inverse:hover {
+  background-color: transparent;
+}
