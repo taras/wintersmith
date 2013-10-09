@@ -73,7 +73,7 @@
       <div id="content">
         <header>
           <h1>Templating</h1>
-          <p>Variables, helpers and partials</p>
+          <p>Variables, helpers, partials and the content tree</p>
           <hr>
           </header>
         <p><strong>Embersmith</strong> uses <a href="http://handlebarsjs.com/">Handlebars</a> templating engine.</p>
@@ -83,7 +83,7 @@
 <p>On every page, you have access to all of page&#39;s build in properties and metadata.</p>
 <ul>
 <li><code>{{locals}}</code> object with data from locals property in your <em>*onfig.json</em></li>
-<li><code>{{contents}}</code> entire <a href="/templating/#Content-Tree">contents tree</a></li>
+<li><code>{{contents}}</code> entire <a href="/embersmith/templating/#Content-Tree">contents tree</a></li>
 <li><code>{{title}}</code> from <strong>title</strong> metadata</li>
 <li><code>{{description}}</code> from <strong>description</strong> metadata</li>
 <li><code>{{intro}}</code> text before first <code>&lt;span class=&#39;more&#39;&gt;&lt;/span&gt;</code>, <code>&lt;h2&gt;</code> or <code>&lt;hr&gt;</code></li>
@@ -138,7 +138,7 @@ title: Example
     <hr>
     <div class="links container">
       <div class="iframes">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url='http://taras.github.io/embersmith' data-text='Embersmith - static HTML & JSON generator for Ember.JS projects' undefined>Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url='http://taras.github.io' data-text='Embersmith - static HTML & JSON generator for Ember.JS projects' undefined>Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <iframe src="http://ghbtns.com/github-btn.html?user=taras&repo=embersmith&type=watch&count=true&size=small"
 allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>

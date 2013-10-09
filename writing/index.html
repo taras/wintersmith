@@ -110,7 +110,7 @@ template: index.hbs
 
 Your *Markdown* code will go here.</code></pre>
 <h2 id="Metadata">Metadata</h2>
-<p><strong>Embersmith</strong> metadata is <a href="http://yaml.org/">YAML</a> formatted string between <code>---</code>. <em>YAML</em> parsing is provided by <a href="https://github.com/nodeca/js-yaml">js-yaml</a> module and covers all of the <em>YAML</em> data types including <a href="/writing/#Arrays">arrays</a>, <a href="/writing/#Objects">objects</a> and <a href="/writing/#Multiline-Strings">multiline strings</a>.</p>
+<p><strong>Embersmith</strong> metadata is <a href="http://yaml.org/">YAML</a> formatted string between <code>---</code>. <em>YAML</em> parsing is provided by <a href="https://github.com/nodeca/js-yaml">js-yaml</a> module and covers all of the <em>YAML</em> data types including <a href="/embersmith/writing/#Arrays">arrays</a>, <a href="/embersmith/writing/#Objects">objects</a> and <a href="/embersmith/writing/#Multiline-Strings">multiline strings</a>.</p>
 <h3 id="Arrays">Arrays</h3>
 <pre><code>---
 title: Array demo
@@ -153,7 +153,7 @@ long: |
 <p>Syntax highlighting is provided by <a href="https://github.com/isagalaev/highlight.js">highlight.js</a> module. You can do inline code highlighting and fenced in.</p>
 <h2 id="JSON-Generation">JSON Generation</h2>
 <p><strong>Embersmith</strong> will generate a <em>JSON</em> file for every root directory with an <strong>index.md</strong> file. This <em>JSON</em> will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your <em>Ember</em> app.</p>
-<p>With the following content structure, you will only get a JSON file for <em>/contents/animals</em> directory <strong>animals.json</strong>. The <em>/contents/fish</em> directory will not generate a JSON file because it doesn&#39;t have an <strong>index.md</strong> file.</p>
+<p>With the following content structure, you will only get a <strong>/contents/animals.json</strong> file for <em>/contents/animals</em> directory. The <em>/contents/fish</em> directory will not generate a JSON file because it doesn&#39;t have an <strong>index.md</strong> file.</p>
 <pre><code>/contents/animals/index.md
 /contents/animals/tiger.md
 /contents/animals/lion/index.md
@@ -169,7 +169,7 @@ long: |
     <hr>
     <div class="links container">
       <div class="iframes">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url='http://taras.github.io/embersmith' data-text='Embersmith - static HTML & JSON generator for Ember.JS projects' undefined>Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url='http://taras.github.io' data-text='Embersmith - static HTML & JSON generator for Ember.JS projects' undefined>Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <iframe src="http://ghbtns.com/github-btn.html?user=taras&repo=embersmith&type=watch&count=true&size=small"
 allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>
