@@ -1,6 +1,6 @@
 ---
 title: Templating
-description: Variables, helpers and partials
+description: Variables, helpers, partials and the content tree
 template: index.hbs
 ---
 
@@ -12,6 +12,8 @@ template: index.hbs
 
 On every page, you have access to all of page's build in properties and metadata.
 
+- ```{{locals}}``` object with data from locals property in your **onfig.json*
+- ```{{contents}}``` entire [contents tree](#Content-Tree)
 - ```{{title}}``` from **title** metadata
 - ```{{description}}``` from **description** metadata
 - ```{{intro}}``` text before first ```<span class='more'></span>```, ```<h2>``` or ```<hr>```
@@ -61,3 +63,31 @@ Inside of helper functions, you have access to the page that was used to create 
 ## Partials
 
 Partials go into **/templates/partials** directory. Every partial is a *Handlebars* file with **hbs** extension. You can include partials in a template with ```{{> name_of_partial}}```.
+
+## Content Tree
+
+In the template, you have access to a ```contents``` variable. You can use this variable to access directories and pages in the contents tree. Let's take a look at the following tree structure. 
+
+```
+/contents/animals/index.md
+/contents/animals/tiger.md
+/contents/animals/lion/index.md
+/contents/fish/bash.md
+/contents/fish/trout.md
+```
+
+```contents.animals._.pages``` would give you an object with properties as file or directory name and value as the page. You can use this object to interate over pages.
+
+```handlebars
+{{#each contents.animals._.pages}}
+  {{title}}
+{{/each}}
+```
+
+To access the *index.md* file in a directory, 
+
+```handlebars
+{{#with contents.animals._.index.[0]}}
+  {{title}}
+{{/with}}
+```

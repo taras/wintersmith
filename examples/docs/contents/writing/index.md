@@ -76,7 +76,7 @@ long: |
 
 ```json
 {
-  "locals": {...}
+  "locals": {...},
   "markdown": {
     "gfm": true,           # use GitHub flavored Markdown
     "tables": true,        # enable GFM tables support 
@@ -85,7 +85,6 @@ long: |
     "smartLists": true,    # Use smarter list behavior than the original markdown.
     "smartypants": false,  # Use "smart" typograhic punctuation for things like quotes and dashes.
     "langPrefix": "lang-"  # Set the prefix for code block classes.
-    ""
   }
 }
 
@@ -101,6 +100,16 @@ Syntax highlighting is provided by [highlight.js](https://github.com/isagalaev/h
 
 ## JSON Generation
 
-**Embersmith** will generate a *JSON* file for every directory. This *JSON* will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your *Ember* app.
+**Embersmith** will generate a *JSON* file for every root directory with an **index.md** file. This *JSON* will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your *Ember* app.
+
+With the following content structure, you will only get a **/contents/animals.json** file for */contents/animals* directory. The */contents/fish* directory will not generate a JSON file because it doesn't have an **index.md** file.
+
+```
+/contents/animals/index.md
+/contents/animals/tiger.md
+/contents/animals/lion/index.md
+/contents/fish/bash.md
+/contents/fish/trout.md
+```
 
 Checkout the [/contributors](/contributors) page and its [/contributors.json](/contributors.json) representation.

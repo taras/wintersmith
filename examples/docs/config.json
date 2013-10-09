@@ -1,7 +1,7 @@
 {
   "locals": {
     "name": "Embersmith",
-    "url": "http://taras.github.io/embersmith",
+    "url": "http://taras.github.io",
     "dev": "http://localhost:8000",
     "description": "",
     "keywords": "",
@@ -9,5 +9,6 @@
       "GitHub": "https://github.com/taras/embersherpa",
       "NPM": "https://npmjs.org/package/embersmith"
     }
-  }
+  },
+  "baseUrl": "/embersmith"
 }
