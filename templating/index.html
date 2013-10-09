@@ -63,6 +63,9 @@
 
         <a href="#Partials" class="list-group-item">Partials</a>
       
+
+        <a href="#Content-Tree" class="list-group-item">Content Tree</a>
+      
       </div>
       
     </aside>  
@@ -79,6 +82,8 @@
 <h2 id="Variables">Variables</h2>
 <p>On every page, you have access to all of page&#39;s build in properties and metadata.</p>
 <ul>
+<li><code>{{locals}}</code> object with data from locals property in your <em>*onfig.json</em></li>
+<li><code>{{contents}}</code> entire <a href="/templating/#Content-Tree">contents tree</a></li>
 <li><code>{{title}}</code> from <strong>title</strong> metadata</li>
 <li><code>{{description}}</code> from <strong>description</strong> metadata</li>
 <li><code>{{intro}}</code> text before first <code>&lt;span class=&#39;more&#39;&gt;&lt;/span&gt;</code>, <code>&lt;h2&gt;</code> or <code>&lt;hr&gt;</code></li>
@@ -109,6 +114,21 @@ title: Example
 <p>Inside of helper functions, you have access to the page that was used to create the context for the <strong>Handlebars</strong> template. It gives you methods like <code>this.parse_markdown(content)</code> which you can use to parse <em>Markdown</em> from <em>metadata</em>.</p>
 <h2 id="Partials">Partials</h2>
 <p>Partials go into <strong>/templates/partials</strong> directory. Every partial is a <em>Handlebars</em> file with <strong>hbs</strong> extension. You can include partials in a template with <code>{{&gt; name_of_partial}}</code>.</p>
+<h2 id="Content-Tree">Content Tree</h2>
+<p>In the template, you have access to a <code>contents</code> variable. You can use this variable to access directories and pages in the contents tree. Let&#39;s take a look at the following tree structure. </p>
+<pre><code>/contents/animals/index.md
+/contents/animals/tiger.md
+/contents/animals/lion/index.md
+/contents/fish/bash.md
+/contents/fish/trout.md</code></pre>
+<p><code>contents.animals._.pages</code> would give you an object with properties as file or directory name and value as the page. You can use this object to interate over pages.</p>
+<pre><code class="lang-handlebars">{{#each contents.animals._.pages}}
+  {{title}}
+{{/each}}</code></pre>
+<p>To access the <em>index.md</em> file in a directory, </p>
+<pre><code class="lang-handlebars">{{#with contents.animals._.index.[0]}}
+  {{title}}
+{{/with}}</code></pre>
 
       </div>
     </div>

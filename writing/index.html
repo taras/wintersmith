@@ -136,7 +136,7 @@ long: |
 <h2 id="Markdown">Markdown</h2>
 <p><strong>Embersmith</strong> allows you to write content using <a href="https://help.github.com/articles/github-flavored-markdown">GitHub flavored Markdown</a>. <em>Markdown</em> parsing is provided by <a href="https://github.com/chjj/marked">marked</a> module. You can configure the Markdown parser by specifying any of the <em>marked</em> module options in <em>markdown</em> property of your project&#39;s <strong>config.json</strong>.</p>
 <pre><code class="lang-json">{
-  &quot;locals&quot;: {...}
+  &quot;locals&quot;: {...},
   &quot;markdown&quot;: {
     &quot;gfm&quot;: true,           # use GitHub flavored Markdown
     &quot;tables&quot;: true,        # enable GFM tables support 
@@ -145,7 +145,6 @@ long: |
     &quot;smartLists&quot;: true,    # Use smarter list behavior than the original markdown.
     &quot;smartypants&quot;: false,  # Use &quot;smart&quot; typograhic punctuation for things like quotes and dashes.
     &quot;langPrefix&quot;: &quot;lang-&quot;  # Set the prefix for code block classes.
-    &quot;&quot;
   }
 }</code></pre>
 <h2 id="Images">Images</h2>
@@ -153,7 +152,13 @@ long: |
 <h2 id="Syntax-highlighting">Syntax highlighting</h2>
 <p>Syntax highlighting is provided by <a href="https://github.com/isagalaev/highlight.js">highlight.js</a> module. You can do inline code highlighting and fenced in.</p>
 <h2 id="JSON-Generation">JSON Generation</h2>
-<p><strong>Embersmith</strong> will generate a <em>JSON</em> file for every directory. This <em>JSON</em> will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your <em>Ember</em> app.</p>
+<p><strong>Embersmith</strong> will generate a <em>JSON</em> file for every root directory with an <strong>index.md</strong> file. This <em>JSON</em> will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your <em>Ember</em> app.</p>
+<p>With the following content structure, you will only get a JSON file for <em>/contents/animals</em> directory <strong>animals.json</strong>. The <em>/contents/fish</em> directory will not generate a JSON file because it doesn&#39;t have an <strong>index.md</strong> file.</p>
+<pre><code>/contents/animals/index.md
+/contents/animals/tiger.md
+/contents/animals/lion/index.md
+/contents/fish/bash.md
+/contents/fish/trout.md</code></pre>
 <p>Checkout the <a href="/contributors">/contributors</a> page and its <a href="/contributors.json">/contributors.json</a> representation.</p>
 
       </div>
