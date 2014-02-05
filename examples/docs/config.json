@@ -10,5 +10,6 @@
       "NPM": "https://npmjs.org/package/embersmith"
     }
   },
-  "baseUrl": "/embersmith"
+  "baseUrl": "/embersmith",
+	"endpoints": true
 }

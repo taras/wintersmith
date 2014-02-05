@@ -100,7 +100,7 @@ Syntax highlighting is provided by [highlight.js](https://github.com/isagalaev/h
 
 ## JSON Generation
 
-**Embersmith** will generate a *JSON* file for every root directory with an **index.md** file. This *JSON* will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your *Ember* app.
+**Embersmith** can generate a *JSON* file for every root directory with an **index.md** file. To enable this feature, you must add ```"endpoints":true``` to your site's config.json. This *JSON* will contain metadata, html and markdown of every file in that directory. You can use these files to preload static content into your *Ember* app.
 
 With the following content structure, you will only get a **/contents/animals.json** file for */contents/animals* directory. The */contents/fish* directory will not generate a JSON file because it doesn't have an **index.md** file.
 
