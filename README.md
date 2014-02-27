@@ -1,9 +1,8 @@
-
 # Embersmith
 
 **Embersmith** is a static HTML and JSON generator for [Ember.js](http://emberjs.com/) projects.
 
-## [Documentation](http://taras.github.io/embersmith.js)
+## [Documentation](http://taras.github.io/embersmith)
 
 ## Credit
 
