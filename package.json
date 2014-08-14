@@ -33,7 +33,7 @@
     "server-destroy": "1.0.x",
     "shelljs": "~0.1.4",
     "safeps": "~2.2.8",
-    "marked": "~0.2.10",
+    "marked": "~0.3.2",
     "ncp": "~0.2.7",
     "chokidar": "~0.6.3",
     "glob": "~3.1.21",
